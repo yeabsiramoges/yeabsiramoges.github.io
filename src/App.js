@@ -4,7 +4,7 @@ import { BrowserRouter,Switch, Route } from "react-router-dom";
 //CSS COMPONENT IMPORTS
 import './font-awesome-4.7.0/css/font-awesome.min.css';
 
-import Layout from './layout/Layout';
+import Layout from './components/layout/Layout';
 import Wrap from './components/section/Wrap';
 import Category from './components/section/Category';
 import PartGrid from './components/section/PartGrid';
