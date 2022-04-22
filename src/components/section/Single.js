@@ -16,7 +16,7 @@ export default class Single extends Component {
     componentDidMount = async() => {
         const link = this.props.match.params.slug;
 
-        const Comsic = require('cosmicjs')
+        const Cosmic = require('cosmicjs')
         const api = Cosmic()
         
         const bucket = api.bucket({
