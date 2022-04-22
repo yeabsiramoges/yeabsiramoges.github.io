@@ -44,4 +44,32 @@ class App extends Component {
             }
         });
     }
+    handleMenu = () => {
+        this.setState((prevProps) => ({visable: !this.prevProps.visible}));
+    }
+
+    render() {
+        console.log(this.state.category);
+        
+        return (
+            <div className="App">
+                <Layout>
+                    <BrowserRouter>
+                        <>
+                            <Wrap hg={this.state.hg}/>
+                            <Switch>
+                                <Route path="/" exact render={(props) => <Category category={this.state.category}/>}/>
+                                <Route path='/contact' exact component={Contact} />
+                                <Route path='/img/:slug' component={Single} exact />
+                                <Route path='/:slug' component={PartGrid} exact />
+                            </Switch>
+                        </>
+                    </BrowserRouter>
+                    <Center fs>"Yeabsira Moges's Photography Portfolio"</Center>
+                    <Footer/>
+                </Layout>
+            </div>
+        );
+    }
 }
+
